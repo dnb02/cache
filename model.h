@@ -12,7 +12,6 @@ enum kindofentry { good, empty, dirty };
 struct cacheline{
 	int address;
 	int value;
-	enum kindofentry typeinfo;
 };
 
 
@@ -29,7 +28,6 @@ cache initcache(){
 	for(int i = 0; i < CACHE_SIZE; i++){
 		c[i]->address = 0;
 		c[i]->value = 0;
-		c[i]->typeinfo = empty;
 	}
 	return c;
 }

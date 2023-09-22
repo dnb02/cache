@@ -4,6 +4,7 @@ cache L1 = initcache(); //array of size 11 of type struct cacheline
 
 void get_from_memory(int address){
 	block target = &L1[hash(address)];
+	put_into_memory(target);
 	target->address = address;
 	target->value = memory[address];
 }
