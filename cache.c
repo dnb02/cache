@@ -48,9 +48,10 @@ void initmemory() {
 
 
 int main(){
+	int address;
 	initmemory();
-	get_from_memory(333);
-	int c = get_from_cache(333);
-	printf("%d\n",c);
+	printf("enter an address:");
+	scanf("%d",&address);
+	printf("%d\n",get_from_cache(address));
 	return 0;
 }
